@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-urbanist: "Urbanist", sans-serif;
+    --font-hegarty: "BBH Sans Hegarty", sans-serif;
+    --font-satoshi: "Satoshi", sans-serif;
+}
+
+/* Font List: Satoshi, Urbanist, BBH Sans Hegarty */
+
+body {
+    background: #ffffff;
+    color: #5b5b63;
+    font-family: var(--font-hegarty);
+    /* Dot grid background (Black dot grid) */
+    background-image: radial-gradient(#0d0d0d 1px, transparent 0);
+    background-size: 128px 128px;
+    height: 100vh;
+    overflow: hidden;
+    /* Lock scroll for one-page layout */
+}
+
+.cursor {
+    display: none;
+}
+
+/* Follower circle (lag) */
+.cursor-follower {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #85C200;
+    /* Subtle dark border */
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    /* border-radius: 50%; */
+    /* Make it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 0;
+    transition: width 0.3s, height 0.3s, border-radius 0.3s, padding 0.3s, background-color 0.3s;
+}
+
+.cursor-follower.has-text {
+    width: auto;
+    height: auto;
+    padding: 0.2rem 0.5rem;
+    /* border-radius: 2rem; */
+    font-size: 0.7rem;
+    /* background-color: #85C200; */
+    color: #ffffffda;
+    font-weight: 700;
+    border: none;
+    background-color: #0d0d0d;
+}
+
+
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+}
+
+.navsec {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    height: fit-content;
+}
+
+.leftnav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.soywrap {
+    font-size: 20px;
+    font-weight: 500;
+    width: 32px;
+    height: fit-content;
+}
+
+.sagarwrap {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 500;
+    font-style: italic;
+    width: fit-content;
+}
+
+.rightnav {
+    display: flex;
+    align-items: flex-start;
+    height: fit-content;
+    width: fit-content;
+    gap: 48px;
+}
+
+.contactwrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-end;
+    height: fit-content;
+    width: fit-content;
+}
+
+.contactme {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contactme img {
+    width: 16px;
+    height: 16px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.aboutme {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 6px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.aboutme img {
+    width: 21px;
+    height: 27px;
+}
+
+.mainsection {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 7%;
+    gap: 250px;
+}
+
+.myphotowrap {
+    display: flex;
+    gap: 12px;
+    width: fit-content;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 80%;
+}
+
+.sagarphotowrap {
+    display: flex;
+    gap: 14px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.photo {
+    width: 160px;
+    height: 180px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 8px;
+    width: fit-content;
+    width: 238px;
+}
+
+.welcome h1 {
+    font-size: 28px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.welcome h2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.myworks {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 8px;
+    width: fit-content;
+}
+
+.myworks h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.works {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 4px;
+    width: fit-content;
+}
+
+.works img {
+    width: 14px;
+    height: 14px;
+}
+
+.myworks h3 {
+    font-size: 60px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.gallery {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align to the bottom of the section */
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* Center the group for a more clustered, consistent look */
+    align-items: flex-end;
+    /* Stay at the baseline */
+    gap: 0.8vw;
+    /* Maintain a consistent gap like the photo */
+    /* padding: 0 1rem; */
+}
+
+.wrapper>div {
+    flex-shrink: 1;
+    /* Allow shrinking to stay in frame */
+    width: 16%;
+    height: 25vh;
+    overflow: hidden;
+    cursor: pointer;
+    filter: grayscale(0);
+}
+
+/* Landscape Items (Even) */
+.wrapper>div:nth-child(even) {
+    width: 18%;
+    height: 15vh;
+}
+
+.wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile-text {
+    display: none;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-top: 0.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #1d1d1d;
+}
+
+@media (max-width: 768px) {
+    body {
+        cursor: auto;
+        overflow: auto;
+        height: auto;
+    }
+
+    .cursor,
+    .cursor-follower {
+        display: none !important;
+    }
+
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        justify-content: flex-start;
+        padding: 2rem 1rem;
+    }
+
+    .gallery {
+        height: auto;
+        margin-top: 10vh;
+        padding-bottom: 0;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30vh;
+        /* Large gap so they stack one after another */
+        padding-bottom: 20vh;
+        /* Ensures the last item finishes in the center */
+    }
+
+    .wrapper>div,
+    .wrapper>div:nth-child(even) {
+        width: 95% !important;
+        height: auto !important;
+        position: sticky;
+        top: 15vh;
+        /* Balanced "little bit down" position */
+        background: #d6dce1;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        padding-bottom: 1.5rem;
+        overflow: hidden;
+    }
+
+    .wrapper img {
+        width: 100%;
+        height: 60vh;
+        /* Taller preview */
+        aspect-ratio: 4/5;
+        object-fit: cover;
+    }
+
+    .mobile-text {
+        display: block;
+        font-family: var(--font-hegarty);
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #1d1d1d;
+    }
+
+    .title-text h2 {
+        font-size: 4rem;
+        /* or another appropriate size for mobile */
+    }
+}
