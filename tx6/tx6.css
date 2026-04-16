@@ -27,7 +27,7 @@ body {
 
 /* ─── Typography helpers ─────────────────────────────────── */
 .font-satoshi {
-    font-family: "Satoshi-Variable", "Satoshi Variable", system-ui, sans-serif;
+    font-family: "Satoshi", system-ui, sans-serif;
 }
 
 .font-mono {
@@ -56,7 +56,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Satoshi-Variable", "Satoshi Variable", system-ui, sans-serif;
+    font-family: "Satoshi", system-ui, sans-serif;
     font-weight: 300;
     font-variation-settings: "wght" 300;
     font-size: 24px;
@@ -142,7 +142,7 @@ body {
     z-index: 0;
     /* behind the image */
 
-    font-family: "Satoshi-Variable", "Satoshi Variable", system-ui, sans-serif;
+    font-family: "Satoshi", system-ui, sans-serif;
     font-weight: 500;
     font-variation-settings: "wght" 500;
     font-size: clamp(120px, 20.83vw, 250px);
@@ -359,6 +359,8 @@ body {
     flex: 1;
     object-fit: cover;
     pointer-events: none;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 /* ============================================================
@@ -376,6 +378,8 @@ body {
     width: 100%;
     height: 100vh;
     object-fit: contain;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .render-section {
@@ -495,7 +499,7 @@ body {
 }
 
 .project-box span {
-    font-family: "Satoshi-Variable", "Satoshi Variable", system-ui, sans-serif;
+    font-family: "Satoshi", system-ui, sans-serif;
     font-weight: 300;
     font-size: 14px;
     line-height: 1.2;

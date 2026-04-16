@@ -338,13 +338,26 @@ a {
 }
 
 .wrapper>div {
+    position: relative;
     flex-shrink: 1;
     /* Allow shrinking to stay in frame */
     width: 16%;
     height: 25vh;
-    overflow: hidden;
+    overflow: visible;
     cursor: pointer;
     filter: grayscale(0);
+}
+
+.wrapper>div::before {
+    content: attr(data-number);
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    font-size: 28px;
+    font-weight: 500;
+    color: #8fc857;
+    font-family: var(--font-satoshi);
+    margin-bottom: 0.5rem;
 }
 
 /* Landscape Items (Even) */
@@ -478,6 +491,10 @@ a {
         /* Ensures the last item finishes in the center */
     }
 
+    .wrapper>div::before {
+        display: none;
+    }
+
     .wrapper>div,
     .wrapper>div:nth-child(even) {
         width: 95% !important;
@@ -488,9 +505,8 @@ a {
         background: #ffffff;
         display: flex;
         flex-direction: column;
-        border-radius: 8px;
         padding-bottom: 1.5rem;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .wrapper img {
