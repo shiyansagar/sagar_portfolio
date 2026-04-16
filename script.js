@@ -261,4 +261,19 @@ window.addEventListener('load', () => {
     }
 });
 // ────────────────────────────────────────────────────────────────────────────
+// ── Page Loader ─────────────────────────────────────────────────────────────
+const loader = document.getElementById("pageLoader");
+function hideLoader() {
+    if (!loader) return;
+    gsap.to(loader, {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.inOut",
+        onComplete: () => {
+            loader.style.display = "none";
+        },
+    });
+}
+window.addEventListener("load", hideLoader);
+// ────────────────────────────────────────────────────────────────────────────
 

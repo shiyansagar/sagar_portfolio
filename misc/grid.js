@@ -66,7 +66,10 @@
 
             let galleryHtml = '';
             photos.forEach(src => {
-                galleryHtml += `<div class="gm-cover gm-gallery-item"><img src="${src.trim()}" alt="Gallery"></div>`;
+                galleryHtml += `
+                    <div class="gm-cover gm-gallery-item is-loading">
+                        <img src="${src.trim()}" alt="Gallery" loading="lazy" onload="this.parentElement.classList.add('is-loaded'); this.parentElement.classList.remove('is-loading');">
+                    </div>`;
             });
 
             const mainImg = item.querySelector('img')?.src || '';
@@ -76,7 +79,7 @@
                 html: `
                     <div class="gm-meta"><span class="gm-category">${category}</span></div>
                     <div class="gm-category1"><p>${category1}</p></div>
-                    ${mainImg ? `<div class="gm-cover gm-main-img"><img src="${mainImg}" alt="${title}"></div>` : ''}
+                    ${mainImg ? `<div class="gm-cover gm-main-img is-loading"><img src="${mainImg}" alt="${title}" loading="lazy" onload="this.parentElement.classList.add('is-loaded'); this.parentElement.classList.remove('is-loading');"></div>` : ''}
                     <div class="gm-extended">
                         ${conceptTitle ? `<h4>${conceptTitle}</h4>` : ''}
                         ${conceptDesc ? `<p>${conceptDesc}</p>` : ''}
@@ -99,15 +102,15 @@
         const mainImg = item.querySelector('img')?.src || '';
         const hideMain = item.dataset.hideMain === 'true';
         if (mainImg && !hideMain) {
-            mediaHtml += `<div class="gm-cover"><img src="${mainImg}" alt="${title}"></div>`;
+            mediaHtml += `<div class="gm-cover is-loading"><img src="${mainImg}" alt="${title}" loading="lazy" onload="this.parentElement.classList.add('is-loaded'); this.parentElement.classList.remove('is-loading');"></div>`;
         }
 
         // Add videos
         videos.forEach(src => {
             if (src.trim()) {
                 mediaHtml += `
-                <div class="gm-cover gm-video-wrap">
-                    <video class="gm-video" data-src="${src.trim()}" muted loop playsinline preload="none"></video>
+                <div class="gm-cover gm-video-wrap is-loading">
+                    <video class="gm-video" data-src="${src.trim()}" muted loop playsinline preload="none" onloadeddata="this.parentElement.classList.add('is-loaded'); this.parentElement.classList.remove('is-loading');"></video>
                 </div>`;
             }
         });
@@ -115,7 +118,7 @@
         // Add extra photos with potential links
         photos.forEach((src, idx) => {
             if (src.trim()) {
-                mediaHtml += `<div class="gm-cover"><img src="${src.trim()}" alt="Project View"></div>`;
+                mediaHtml += `<div class="gm-cover is-loading"><img src="${src.trim()}" alt="Project View" loading="lazy" onload="this.parentElement.classList.add('is-loaded'); this.parentElement.classList.remove('is-loading');"></div>`;
                 if (links[idx] && links[idx].trim()) {
                     mediaHtml += `<div class="gm-link-row"><a href="${links[idx].trim()}" target="_blank" class="gm-link-btn">Visit Website</a></div>`;
                 }
@@ -268,5 +271,38 @@
             }
         }, 150);
     });
+
+    /* ══════════════════════════════════════
+       PAGE LOADER
+    ══════════════════════════════════════ */
+    const pageLoader = document.getElementById("pageLoader");
+    function hidePageLoader() {
+        if (!pageLoader) return;
+        gsap.to(pageLoader, {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.inOut",
+            onComplete: () => {
+                pageLoader.style.display = "none";
+                // Staggered entrance animation after loader is gone
+                gsap.to('.grid-item', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.1,
+                    ease: 'expo.out',
+                    stagger: {
+                        each: 0.07,
+                        from: 'start'
+                    }
+                });
+            },
+        });
+    }
+
+    if (document.readyState === "complete") {
+        hidePageLoader();
+    } else {
+        window.addEventListener("load", hidePageLoader);
+    }
 
 })();

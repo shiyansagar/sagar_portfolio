@@ -41,77 +41,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// ── 2. Loading Screen ───────────────────────────────
-const loader = document.getElementById('loader');
-const loaderLine = document.querySelector('.loader_line');
-
-const loadTl = gsap.timeline({
-    onComplete: () => {
-        loader.style.display = 'none';
-        initScrollAnimations(); // Start scroll animations after load
-    }
-});
-
-// Line sweeps across → loader fades up and out
-loadTl
-    .to(loaderLine, {
-        width: '100%',
-        duration: 0.6, // Snappier line
-        ease: 'power3.inOut',
-    })
-    .to(loader, {
-        yPercent: -100,
-        duration: 0.6, // Fast exit
-        ease: 'power4.inOut',
-        delay: 0.05,
-    })
-    // High-speed staggered reveal
-    .from('nav', {
-        y: -20,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power3.out',
-    }, '-=0.4')
-    .from('.brief h2, .brief p', {
-        y: 30,
+// ── Page Loader ─────────────────────────────────────────────────────────────
+const pageLoaderEl = document.getElementById("pageLoader");
+function hidePageLoader() {
+    if (!pageLoaderEl) return;
+    gsap.to(pageLoaderEl, {
         opacity: 0,
         duration: 0.5,
-        stagger: 0.08, // Tight stagger
-        ease: 'power3.out',
-    }, '-=0.5')
-    .from('.process h2', {
-        y: 20,
-        opacity: 0,
-        duration: 0.6,
-        ease: 'power3.out',
-    }, '-=0.5')
-    .from('.box_process', {
-        opacity: 0,
-        y: 20,
-        duration: 0.5,
-        stagger: 0.1, // Snappy boxes
-        ease: 'power3.out',
-    }, '-=0.4')
-    .from('.process_arrow', {
-        opacity: 0,
-        x: -5,
-        duration: 0.3,
-        stagger: 0.1,
-        ease: 'power2.out',
-    }, '-=0.4')
-    .from('.outcome h2', {
-        y: 20,
-        opacity: 0,
-        duration: 0.5,
-        ease: 'power3.out',
-    }, '-=0.4')
-    .from('.veya, .oroa', {
-        opacity: 0,
-        y: 40,
-        duration: 0.5,
-        stagger: 0.12,
-        ease: 'power3.out',
-    }, '-=0.5');
+        ease: "power2.inOut",
+        onComplete: () => {
+            pageLoaderEl.style.display = "none";
+            ScrollTrigger.refresh();
+        },
+    });
+}
+if (document.readyState === "complete") {
+    hidePageLoader();
+} else {
+    window.addEventListener("load", hidePageLoader);
+}
+// ────────────────────────────────────────────────────────────────────────────
 
 
 // ── 3. Scroll-Triggered Animations ─────────────────

@@ -93,6 +93,25 @@ function updateLocalTime() {
 updateLocalTime();
 setInterval(updateLocalTime, 1000);
 
-document.querySelector('.nav-mobile-toggle').addEventListener('click', () => {
-    document.querySelector('.nav-mobile-menu').classList.toggle('active');
-});
+
+
+// ── Page Loader ─────────────────────────────────────────────────────────────
+const loader = document.getElementById("pageLoader");
+function hideLoader() {
+    if (!loader) return;
+    gsap.to(loader, {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.inOut",
+        onComplete: () => {
+            loader.style.display = "none";
+            ScrollTrigger.refresh();
+        },
+    });
+}
+if (document.readyState === "complete") {
+    hideLoader();
+} else {
+    window.addEventListener("load", hideLoader);
+}
+// ────────────────────────────────────────────────────────────────────────────
