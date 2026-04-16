@@ -4,6 +4,11 @@
    All sizes are exact pixel values from the Paper design.
    ============================================================ */
 
+@font-face {
+  font-family: 'Satoshi';
+  font-display: swap;
+}
+
 /* ==================== GLOBAL NAV ==================== */
 .global-nav {
     display: flex;
@@ -397,7 +402,6 @@ body {
     width: max-content;
     gap: 12px;
     padding-left: 12px;
-    will-change: transform;
     /* animation: scroll 200s linear infinite; */
 }
 

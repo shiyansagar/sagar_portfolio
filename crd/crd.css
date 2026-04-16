@@ -4,6 +4,11 @@
    Base font: Satoshi (body) + IBM Plex Mono (artisan cards)
    ============================================================ */
 
+@font-face {
+  font-family: 'Satoshi';
+  font-display: swap;
+}
+
 /* ==================== GLOBAL NAV ==================== */
 .global-nav {
     display: flex;
@@ -277,7 +282,7 @@ section {
 ─────────────────────────────────────────────── */
 .section-heading--serif {
     font-family: 'Satoshi', system-ui, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-size: clamp(24px, 2.22vw, 32px);
     line-height: 1.25;
     color: #000;
@@ -285,7 +290,7 @@ section {
 
 .section-heading--large {
     font-family: 'Satoshi', system-ui, sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: clamp(32px, 3.33vw, 48px);
     line-height: 1.2;
     color: #000;
@@ -329,6 +334,7 @@ section {
     object-position: center;
     transform: scale(1.05);
     transition: transform 0.1s;
+    image-rendering: auto;
 }
 
 /* ───────────────────────────────────────────────
@@ -487,6 +493,8 @@ section {
     gap: 0;
     padding-top: 0;
     padding-bottom: 0;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 600px;
 }
 
 .objectives-section__text-block {
@@ -525,6 +533,7 @@ section {
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    image-rendering: auto;
 }
 
 .objectives-img-wrap:hover img {
@@ -538,6 +547,8 @@ section {
     display: flex;
     align-items: flex-start;
     gap: clamp(24px, 2.78vw, 40px);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
     justify-content: space-between;
     padding-top: clamp(40px, 6.22vw, 89.5px);
     padding-bottom: clamp(8px, 1.11vw, 16px);
@@ -567,6 +578,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    image-rendering: auto;
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -583,6 +595,8 @@ section {
     gap: clamp(12px, 1.11vw, 16px);
     padding-top: clamp(40px, 6.94vw, 100px);
     padding-bottom: clamp(8px, 1.11vw, 16px);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
 }
 
 .methodology-section__header {
@@ -602,7 +616,7 @@ section {
 
 .methodology-big-title {
     font-family: 'Satoshi', system-ui, sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: clamp(32px, 4.44vw, 64px);
     line-height: 1.2;
     color: #000;
@@ -633,6 +647,8 @@ section {
    FIELD WORK & PROCESS
 ─────────────────────────────────────────────── */
 .fieldwork-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 800px;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -681,6 +697,7 @@ section {
     width: 100%;
     display: block;
     object-fit: cover;
+    image-rendering: auto;
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -735,10 +752,6 @@ section {
     gap: clamp(24px, 2.92vw, 42px);
     padding-top: clamp(40px, 6.94vw, 100px);
     padding-bottom: clamp(8px, 1.11vw, 16px);
-}
-
-.scope-section .section-heading--large {
-    padding-left: clamp(0px, 0.9vw, 13px);
 }
 
 /* ───────────────────────────────────────────────

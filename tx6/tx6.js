@@ -156,32 +156,46 @@ gsap.ticker.lagSmoothing(0);
         ctx.drawImage(img, 0, offsetY, canvas.width, drawH);
     }
 
-    for (let i = 0; i < TOTAL_FRAMES; i++) {
-        const img = new Image();
-        img.src = framePath(i + 1);
-        img.onload = () => {
-            loadedCount++;
-            if (i === 0) drawFrame(0);
-        };
-        frames[i] = img;
-    }
+    const seqSection = document.getElementById('seq-section');
+    let framesLoaded = false;
+    const seqObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting && !framesLoaded) {
+                framesLoaded = true;
+                // Load all frames only when section comes into view
+                for (let i = 0; i < TOTAL_FRAMES; i++) {
+                    const img = new Image();
+                    img.src = framePath(i + 1);
+                    img.onload = () => {
+                        loadedCount++;
+                        if (i === 0) drawFrame(0);
+                    };
+                    frames[i] = img;
+                }
 
-    const seqObj = { frame: 0 };
-    gsap.to(seqObj, {
-        frame: TOTAL_FRAMES - 1,
-        snap: 'frame',
-        ease: 'none',
-        scrollTrigger: {
-            trigger: '#seq-section',
-            start: 'top top',
-            end: '+=300%',
-            scrub: 1,
-            pin: true,
-        },
-        onUpdate() {
-            drawFrame(Math.round(seqObj.frame));
-        },
-    });
+                // Set up GSAP animation
+                const seqObj = { frame: 0 };
+                gsap.to(seqObj, {
+                    frame: TOTAL_FRAMES - 1,
+                    snap: 'frame',
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#seq-section',
+                        start: 'top top',
+                        end: '+=300%',
+                        scrub: 1,
+                        pin: true,
+                    },
+                    onUpdate() {
+                        drawFrame(Math.round(seqObj.frame));
+                    },
+                });
+
+                seqObs.unobserve(seqSection);
+            }
+        });
+    }, { threshold: 0.1 });
+    seqObs.observe(seqSection);
 })();
 
 // ── Page Loader ─────────────────────────────────────────────────────────────

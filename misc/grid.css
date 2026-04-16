@@ -1,6 +1,11 @@
 /* ─────────────────────────────────────────────
    ROOT & RESET
 ───────────────────────────────────────────── */
+@font-face {
+  font-family: 'Satoshi';
+  font-display: swap;
+}
+
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap');
 
 *,
@@ -67,7 +72,6 @@ body {
     /* For staggered entrance */
     opacity: 0;
     transform: translateY(12px);
-    will-change: transform;
 }
 
 /* ─────────────────────────────────────────────
@@ -120,7 +124,7 @@ body {
     object-fit: cover;
     display: block;
     transition: transform 0.7s var(--easing), filter 0.7s var(--easing);
-    will-change: transform;
+    image-rendering: auto;
     filter: invert(100%);
 }
 

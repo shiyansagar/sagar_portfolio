@@ -4,9 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
     <title>IDM</title>
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet">
+    <link rel="preload"
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@500,400&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet"
+        href="https://api.fontshare.com/v2/css?f[]=satoshi@500,400&display=swap">
+    </noscript>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="../fevicon.svg?v=2">
     <link rel="stylesheet" href="idm.css">
@@ -91,7 +99,7 @@
                             </div>
                             <div class="oroa">
                                 <h2>2. Oroa</h2>
-                                <img src="webp/oroa_hero.webp" alt="" loading="lazy" width="180" height="180">
+                                <img src="webp/oroa_hero.webp" alt="" loading="lazy" decoding="async" width="180" height="180">
                             </div>
                         </div>
                     </div>
@@ -110,8 +118,8 @@
                     </div>
                 </div>
                 <div class="content_right">
-                    <img src="webp/josmo chair.webp" alt="" loading="lazy" width="600" height="400">
-                    <img src="webp/josmo table.webp" alt="" loading="lazy" width="600" height="400">
+                    <img src="webp/josmo chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/josmo table.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
                 </div>
             </div>
             <div class="content_wrapper">
@@ -158,10 +166,10 @@
                 </div>
                 <p>Study of neuron structures focusing on branching, flow, and connection.</p>
             </div>
-            <img src="webp/form-expo.webp" alt="" loading="lazy" width="1200" height="800">
+            <img src="webp/form-expo.webp" alt="" loading="lazy" decoding="async" width="1200" height="800">
         </div>
         <div class="section_4">
-            <img src="webp/chair_hero.webp" alt="Oroa Hero Image" class="hero_img" loading="lazy" width="1200"
+            <img src="webp/chair_hero.webp" alt="Oroa Hero Image" class="hero_img" loading="lazy" decoding="async" width="1200"
                 height="800">
             <div class="left_empty">
 
@@ -180,11 +188,11 @@
                 </div>
                 <div class="oroa_imgwrap">
                     <div class="oroa_img">
-                        <img src="webp/side_chair.webp" alt="side view of oroa chair" loading="lazy" width="200"
+                        <img src="webp/side_chair.webp" alt="side view of oroa chair" loading="lazy" decoding="async" width="200"
                             height="150">
-                        <img src="webp/top_chair.webp" alt="top view of oroa chair" loading="lazy" width="200"
+                        <img src="webp/top_chair.webp" alt="top view of oroa chair" loading="lazy" decoding="async" width="200"
                             height="150">
-                        <img src="webp/front_chair.webp" alt="front view of oroa chair" loading="lazy" width="200"
+                        <img src="webp/front_chair.webp" alt="front view of oroa chair" loading="lazy" decoding="async" width="200"
                             height="200">
                     </div>
                     <h2>H 700mm, W 800mm</h2>
@@ -192,7 +200,7 @@
             </div>
         </div>
         <div class="section_5">
-            <img src="webp/sec2_chair.webp" alt="" class="mat_image" loading="lazy" width="800" height="600">
+            <img src="webp/sec2_chair.webp" alt="" class="mat_image" loading="lazy" decoding="async" width="800" height="600">
             <div class="mat_content">
                 <div class="mat_wrapper">
                     <h2>Material</h2>
@@ -217,20 +225,20 @@
             <div class="render_img">
 
                 <div class="render_stack1">
-                    <img src="webp/r1_chair.webp" alt="" loading="lazy" width="600" height="400">
-                    <img src="webp/r2_chair.webp" alt="" loading="lazy" width="600" height="400">
-                    <img src="webp/r3_chair.webp" alt="" loading="lazy" width="600" height="400">
+                    <img src="webp/r1_chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/r2_chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/r3_chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
                 </div>
                 <div class="render_stack2">
-                    <img src="webp/r4_chair.webp" alt="" loading="lazy" width="600" height="400">
-                    <img src="webp/r5_chair.webp" alt="" loading="lazy" width="600" height="400">
+                    <img src="webp/r4_chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/r5_chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
 
                 </div>
             </div>
 
         </div>
         <div class="section_7">
-            <img src="webp/veya_heromain.webp" class="salt_image" loading="lazy" width="800" height="600">
+            <img src="webp/veya_heromain.webp" class="salt_image" loading="lazy" decoding="async" width="800" height="600">
             <div class="left_empty"></div>
             <div class="veya_content">
                 <h4>Project 1</h4>
@@ -260,7 +268,7 @@
                 <h3>Inner Shell (Core)</h3>
                 <p>Food-grade stainless steel or anodized aluminum </p>
             </div>
-            <img src="webp/veya_matmain.webp" class="veya_mat_image" loading="lazy" width="800" height="600">
+            <img src="webp/veya_matmain.webp" class="veya_mat_image" loading="lazy" decoding="async" width="800" height="600">
             <div class="right_empty"></div>
         </div>
         <div class="section_9">
@@ -271,12 +279,12 @@
             <div class="render_img">
 
                 <div class="render_stack1">
-                    <img src="webp/r3_salt.webp" alt="" loading="lazy" width="600" height="400">
-                    <img src="webp/r2_salt.webp" alt="" loading="lazy" width="600" height="400">
-                    <img src="webp/r4_salt.webp" alt="" loading="lazy" width="600" height="400">
+                    <img src="webp/r3_salt.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/r2_salt.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/r4_salt.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
                 </div>
                 <div class="render_stack2">
-                    <img src="webp/r1_salt.webp" alt="" loading="lazy" width="600" height="400">
+                    <img src="webp/r1_salt.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
 
                 </div>
             </div>

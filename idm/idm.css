@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Satoshi';
+  font-display: swap;
+}
+
 /* ==================== GLOBAL NAV ==================== */
 .global-nav {
     display: flex;
@@ -441,6 +446,7 @@ nav ul li a:hover {
     width: 180px;
     aspect-ratio: 1;
     object-fit: cover;
+    image-rendering: auto;
     /*   */
 }
 
@@ -515,6 +521,7 @@ nav ul li a:hover {
     height: 180px;
     object-fit: cover;
     background: #fff;
+    image-rendering: auto;
     /* Match screenshot placeholder feel */
 }
 
@@ -634,6 +641,7 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     object-fit: cover;
+    image-rendering: auto;
     margin: -100px auto 0;
     /* Pulls it closer and centers it */
 }
@@ -660,6 +668,7 @@ nav ul li a:hover {
     height: 120vh;
     /* Increased height for full coverage */
     object-fit: cover;
+    image-rendering: auto;
     z-index: -1;
     pointer-events: none;
     /* opacity: 0.9; */
@@ -766,6 +775,7 @@ nav ul li a:hover {
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 120vh;
+    image-rendering: auto;
     object-fit: cover;
     z-index: -1;
     pointer-events: none;
@@ -898,6 +908,7 @@ nav ul li a:hover {
     width: 100vw;
     height: 120vh;
     object-fit: cover;
+    image-rendering: auto;
     z-index: -1;
     pointer-events: none;
 }
@@ -951,6 +962,7 @@ nav ul li a:hover {
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 120vh;
+    image-rendering: auto;
     object-fit: cover;
     z-index: -1;
     pointer-events: none;
