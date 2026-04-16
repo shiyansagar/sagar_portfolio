@@ -42,8 +42,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // ── Page Loader ─────────────────────────────────────────────────────────────
-const pageLoaderEl = document.getElementById("pageLoader");
 function hidePageLoader() {
+    const pageLoaderEl = document.getElementById("pageLoader");
     if (!pageLoaderEl) return;
     gsap.to(pageLoaderEl, {
         opacity: 0,

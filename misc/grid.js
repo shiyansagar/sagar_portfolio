@@ -275,8 +275,8 @@
     /* ══════════════════════════════════════
        PAGE LOADER
     ══════════════════════════════════════ */
-    const pageLoader = document.getElementById("pageLoader");
     function hidePageLoader() {
+        const pageLoader = document.getElementById("pageLoader");
         if (!pageLoader) return;
         gsap.to(pageLoader, {
             opacity: 0,

@@ -96,8 +96,8 @@ setInterval(updateLocalTime, 1000);
 
 
 // ── Page Loader ─────────────────────────────────────────────────────────────
-const loader = document.getElementById("pageLoader");
 function hideLoader() {
+    const loader = document.getElementById("pageLoader");
     if (!loader) return;
     gsap.to(loader, {
         opacity: 0,
