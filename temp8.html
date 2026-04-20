@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,100 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
     <title>IDM</title>
-    <!-- Resource Hints -->
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://api.fontshare.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-
-    <!-- Critical CSS (Page Loader) -->
-    <style>
-        .page-loader {
-            position: fixed;
-            inset: 0;
-            background: #ffffff;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: none;
-        }
-
-        .page-loader__inner {
-            width: 200px;
-            height: 1px;
-            background: rgba(0, 0, 0, 0.12);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-loader__bar {
-            position: absolute;
-            left: -100%;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            animation: loaderSlide 1.1s cubic-bezier(0.76, 0, 0.24, 1) forwards;
-        }
-
-        @keyframes loaderSlide {
-            0% {
-                left: -100%;
-            }
-
-            60% {
-                left: 0%;
-            }
-
-            100% {
-                left: 100%;
-            }
-        }
-    </style>
-
-    <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@500,400&display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload"
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@500,400&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@500,400&display=swap">
+      <link rel="stylesheet"
+        href="https://api.fontshare.com/v2/css?f[]=satoshi@500,400&display=swap">
     </noscript>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="../fevicon.svg?v=2">
-    <link rel="stylesheet" href="idm.css" fetchpriority="high">
-    <!-- Speculation Rules for Instant Page Loads -->
-    <script type="speculationrules">
-        {
-            "prefetch": [
-                {
-                    "source": "document",
-                    "where": {
-                        "and": [
-                            { "href_matches": "/*" }
-                        ]
-                    },
-                    "eagerness": "moderate"
-                }
-            ],
-            "prerender": [
-                {
-                    "source": "document",
-                    "where": {
-                        "and": [
-                            { "href_matches": "/*" }
-                        ]
-                    },
-                    "eagerness": "moderate"
-                }
-            ]
-        }
-    </script>
+    <link rel="stylesheet" href="idm.css">
 </head>
 
 <body>
@@ -111,7 +29,7 @@
     </div>
     <nav class="global-nav">
         <a href="../index.html" class="nav-work">
-            <span class="nav-arrow">←</span>
+            <span class="nav-arrow">ΓåÉ</span>
             <span>Home</span>
         </a>
         <div class="nav-project-title">
@@ -147,7 +65,7 @@
         <div id="hero_section">
             <div class="hero_content">
                 <div class="brief">
-                    <h1>Brief</h1>
+                    <h2>Brief</h2>
                     <p>Design a tabletop object and a seating element for a contemporary furniture studio, A study of
                         biomorphic structures translated into product and furniture design.</p>
                 </div>
@@ -158,15 +76,15 @@
                             <div class="box_process">
                                 <h2>Research</h2>
                             </div>
-                            <span class="process_arrow">→</span>
+                            <span class="process_arrow">ΓåÆ</span>
                             <div class="box_process">
                                 <h2>Form Development</h2>
                             </div>
-                            <span class="process_arrow">→</span>
+                            <span class="process_arrow">ΓåÆ</span>
                             <div class="box_process">
                                 <h2>Application</h2>
                             </div>
-                            <span class="process_arrow">→</span>
+                            <span class="process_arrow">ΓåÆ</span>
                             <div class="box_process">
                                 <h2>Visualisation</h2>
                             </div>
@@ -177,13 +95,11 @@
                         <div class="products">
                             <div class="veya">
                                 <h2>1. Veya</h2>
-                                <img src="webp/veya_hero.webp" alt="Veya salt shaker project" fetchpriority="high"
-                                    width="180" height="180">
+                                <img src="webp/veya_hero.webp" alt="" fetchpriority="high" width="180" height="180">
                             </div>
                             <div class="oroa">
                                 <h2>2. Oroa</h2>
-                                <img src="webp/oroa_hero.webp" alt="Oroa lounge chair project" loading="lazy"
-                                    decoding="async" width="180" height="180">
+                                <img src="webp/oroa_hero.webp" alt="" loading="lazy" decoding="async" width="180" height="180">
                             </div>
                         </div>
                     </div>
@@ -202,10 +118,8 @@
                     </div>
                 </div>
                 <div class="content_right">
-                    <img src="webp/josmo chair.webp" alt="Josmo studio chair" loading="lazy" decoding="async"
-                        width="180" height="180">
-                    <img src="webp/josmo table.webp" alt="Josmo studio table" loading="lazy" decoding="async"
-                        width="180" height="180">
+                    <img src="webp/josmo chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/josmo table.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
                 </div>
             </div>
             <div class="content_wrapper">
@@ -221,7 +135,7 @@
                     </div>
                     <div class="content_box">
                         <h2>Design Language</h2>
-                        <p>Scandinavian minimalism × Indian sensibility. Clean forms with subtle detailing. Sculptural
+                        <p>Scandinavian minimalism ├ù Indian sensibility. Clean forms with subtle detailing. Sculptural
                             yet
                             functional.</p>
                     </div>
@@ -252,12 +166,11 @@
                 </div>
                 <p>Study of neuron structures focusing on branching, flow, and connection.</p>
             </div>
-            <img src="webp/form-expo.webp" alt="Form system development study based on neuron structure" loading="lazy"
-                decoding="async" width="2160" height="1536">
+            <img src="webp/form-expo.webp" alt="" loading="lazy" decoding="async" width="1200" height="800">
         </div>
         <div class="section_4">
-            <img src="webp/chair_hero.webp" alt="Oroa Hero Image" class="hero_img" fetchpriority="high" decoding="async"
-                width="2880" height="1800">
+            <img src="webp/chair_hero.webp" alt="Oroa Hero Image" class="hero_img" loading="lazy" decoding="async" width="1200"
+                height="800">
             <div class="left_empty">
 
             </div>
@@ -275,20 +188,19 @@
                 </div>
                 <div class="oroa_imgwrap">
                     <div class="oroa_img">
-                        <img src="webp/side_chair.webp" alt="side view of oroa chair" loading="lazy" decoding="async"
-                            width="200" height="200">
-                        <img src="webp/top_chair.webp" alt="top view of oroa chair" loading="lazy" decoding="async"
-                            width="200" height="200">
-                        <img src="webp/front_chair.webp" alt="front view of oroa chair" loading="lazy" decoding="async"
-                            width="200" height="200">
+                        <img src="webp/side_chair.webp" alt="side view of oroa chair" loading="lazy" decoding="async" width="200"
+                            height="150">
+                        <img src="webp/top_chair.webp" alt="top view of oroa chair" loading="lazy" decoding="async" width="200"
+                            height="150">
+                        <img src="webp/front_chair.webp" alt="front view of oroa chair" loading="lazy" decoding="async" width="200"
+                            height="200">
                     </div>
                     <h2>H 700mm, W 800mm</h2>
                 </div>
             </div>
         </div>
         <div class="section_5">
-            <img src="webp/sec2_chair.webp" alt="Close up shot of the chair material texture" class="mat_image"
-                loading="lazy" decoding="async" width="1440" height="900">
+            <img src="webp/sec2_chair.webp" alt="" class="mat_image" loading="lazy" decoding="async" width="800" height="600">
             <div class="mat_content">
                 <div class="mat_wrapper">
                     <h2>Material</h2>
@@ -300,7 +212,7 @@
                     </p>
                 </div>
                 <div class="blender_text">
-                    <img src="webp/blender_logo.png" alt="Blender logo" loading="lazy" width="40" height="40">
+                    <img src="webp/blender_logo.png" alt="">
                     <p>Made using blender</p>
                 </div>
             </div>
@@ -313,26 +225,20 @@
             <div class="render_img">
 
                 <div class="render_stack1">
-                    <img src="webp/r1_chair.webp" alt="Oroa chair studio render 1" loading="lazy" decoding="async"
-                        width="600" height="400">
-                    <img src="webp/r2_chair.webp" alt="Oroa chair studio render 2" loading="lazy" decoding="async"
-                        width="600" height="400">
-                    <img src="webp/r3_chair.webp" alt="Oroa chair studio render 3" loading="lazy" decoding="async"
-                        width="600" height="400">
+                    <img src="webp/r1_chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/r2_chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/r3_chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
                 </div>
                 <div class="render_stack2">
-                    <img src="webp/r4_chair.webp" alt="Oroa chair studio render 4" loading="lazy" decoding="async"
-                        width="600" height="400">
-                    <img src="webp/r5_chair.webp" alt="Oroa chair studio render 5" loading="lazy" decoding="async"
-                        width="600" height="400">
+                    <img src="webp/r4_chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/r5_chair.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
 
                 </div>
             </div>
 
         </div>
         <div class="section_7">
-            <img src="webp/veya_heromain.webp" alt="Veya salt shaker hero image" class="salt_image" fetchpriority="high"
-                decoding="async" width="3200" height="2000">
+            <img src="webp/veya_heromain.webp" class="salt_image" loading="lazy" decoding="async" width="800" height="600">
             <div class="left_empty"></div>
             <div class="veya_content">
                 <h4>Project 1</h4>
@@ -355,19 +261,16 @@
 
                 </p>
                 <h3>Outer Shell</h3>
-                <p>Translucent, high-tensile fabric such as TPU-coated stretch mesh or Dyneema composite fabric
-                    (DCF)
+                <p>Translucent, high-tensile fabric such as TPU-coated stretch mesh or Dyneema composite fabric (DCF)
                     mesh
 
                 </p>
                 <h3>Inner Shell (Core)</h3>
                 <p>Food-grade stainless steel or anodized aluminum </p>
             </div>
-            <img src="webp/veya_matmain.webp" alt="Veya salt shaker material close-up" class="veya_mat_image"
-                loading="lazy" decoding="async" width="3200" height="2000">
+            <img src="webp/veya_matmain.webp" class="veya_mat_image" loading="lazy" decoding="async" width="800" height="600">
             <div class="right_empty"></div>
         </div>
-
         <div class="section_9">
             <div class="renders">
                 <h2>Renders</h2>
@@ -376,16 +279,12 @@
             <div class="render_img">
 
                 <div class="render_stack1">
-                    <img src="webp/r3_salt.webp" alt="Veya salt shaker studio render 3" loading="lazy" decoding="async"
-                        width="600" height="400">
-                    <img src="webp/r2_salt.webp" alt="Veya salt shaker studio render 2" loading="lazy" decoding="async"
-                        width="600" height="400">
-                    <img src="webp/r4_salt.webp" alt="Veya salt shaker studio render 4" loading="lazy" decoding="async"
-                        width="600" height="400">
+                    <img src="webp/r3_salt.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/r2_salt.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
+                    <img src="webp/r4_salt.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
                 </div>
                 <div class="render_stack2">
-                    <img src="webp/r1_salt.webp" alt="Veya salt shaker studio render 1" loading="lazy" decoding="async"
-                        width="600" height="400">
+                    <img src="webp/r1_salt.webp" alt="" loading="lazy" decoding="async" width="600" height="400">
 
                 </div>
             </div>
@@ -435,14 +334,13 @@
                     </div>
                     <a href="mailto:shiyansagar@gmail.com" class="footer-new-link">shiyansagar@gmail.com</a>
                     <a href="../../index.html" class="footer-new-link">Home</a>
-                    <a href="https://drive.google.com/drive/folders/15f_C51tl_OvEgSRvTeEGdLZC9Kuj1lyG?usp=drive_link"
-                        class="footer-new-link">CV</a>
+                    <a href="https://drive.google.com/drive/folders/15f_C51tl_OvEgSRvTeEGdLZC9Kuj1lyG?usp=drive_link" class="footer-new-link">CV</a>
                 </div>
                 <div class="footer-new-right">
                     <div class="footer-new-col">
-                        <a href="idm.html" class="footer-new-title">Go Back</a>
+                        <a href="#" class="footer-new-title">Go Back</a>
                         <div class="footer-new-list">
-                            <span>Sagar shiyan©</span>
+                            <span>Sagar shiyan┬⌐</span>
                             <span>Malappuram, Kerala</span>
                             <span>NIFT Jodhpur</span>
                         </div>
@@ -451,20 +349,46 @@
                         <div class="footer-new-title">Contact</div>
                         <div class="footer-new-list">
                             <span>+91 9526470325</span>
-                            <span><a href="https://www.linkedin.com/in/sagar-shiyan-577423300/">Linkedin</a></span>
-                            <span><a href="https://www.are.na/sagar-shiyan/channels">Are. na</a></span>
-                            <span><a href="https://github.com/shiyansagar">Github</a></span>
+                            <span>Linkedin</span>
+                            <span>Are. na</span>
+                            <span>Github</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div id="footer-shader-container"></div>
         </div>
     </footer>
+    <script type="module">
+        import React from 'https://esm.sh/react@18.2.0';
+        import { createRoot } from 'https://esm.sh/react-dom@18.2.0/client';
+        import { GrainGradient } from 'https://esm.sh/@paper-design/shaders-react@0.0.74?deps=react@18.2.0,react-dom@18.2.0';
 
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+        const container = document.getElementById('footer-shader-container');
+        if (container) {
+            const root = createRoot(container);
+            root.render(
+                React.createElement(GrainGradient, {
+                    speed: 1,
+                    scale: 0.61,
+                    rotation: 0,
+                    offsetX: -0.35,
+                    offsetY: 0.2,
+                    softness: 1,
+                    intensity: 0,
+                    noise: 0.42,
+                    shape: "wave",
+                    frame: 22000.899999994042,
+                    colors: ['#3E2C54', '#000000', '#5E4623'],
+                    colorBack: "#00000000",
+                    style: { width: '100%', height: '100%', backgroundColor: 'transparent' }
+                })
+            );
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="idm.js" defer></script>
 </body>
 
