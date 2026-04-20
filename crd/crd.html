@@ -9,12 +9,22 @@
         content="A short-term ethnographic study on the nuanced realities of Khadi wool communities in Bikaner, Rajasthan, conducted by NIFT Jodhpur students." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
-        rel="stylesheet" />
+
+
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
     <!-- Satoshi variable font via CDN -->
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap" />
+    </noscript>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+    </noscript>
     <link rel="icon" type="image/svg+xml" href="../fevicon.svg?v=2">
     <link rel="stylesheet" href="crd.css" />
 </head>
@@ -59,7 +69,8 @@
        HERO
   ────────────────────────────────────────────────────────────────── -->
     <section class="hero" id="hero">
-        <img src="herocrd.webp" alt="Khadi wool artisan in Bikaner" class="hero__img" fetchpriority="high" />
+        <img src="herocrd.webp" alt="Khadi wool artisan in Bikaner" class="hero__img" fetchpriority="high" width="2880"
+            height="1224" />
     </section>
 
     <!-- ──────────────────────────────────────────────────────────────
@@ -162,10 +173,12 @@
         </div>
         <div class="objectives-section__images">
             <div class="objectives-img-wrap objectives-img-wrap--wide">
-                <img src="img2.webp" alt="Khadi weaving community in Bikaner" class="img-reveal" />
+                <img src="img2.webp" alt="Khadi weaving community in Bikaner" class="img-reveal" loading="lazy"
+                    decoding="async" width="770" height="434" />
             </div>
             <div class="objectives-img-wrap objectives-img-wrap--narrow">
-                <img src="img3.webp" alt="Artisans at work in Rajasthan" class="img-reveal" />
+                <img src="img3.webp" alt="Artisans at work in Rajasthan" class="img-reveal" loading="lazy"
+                    decoding="async" width="578" height="434" />
             </div>
         </div>
     </section>
@@ -189,7 +202,8 @@
             </p>
         </div>
         <div class="context-section__image">
-            <img src="img4.webp" alt="Desert landscape of Bikaner, Rajasthan" class="img-reveal" />
+            <img src="img4.webp" alt="Desert landscape of Bikaner, Rajasthan" class="img-reveal" loading="lazy"
+                decoding="async" width="580" height="435" />
         </div>
     </section>
 
@@ -225,17 +239,17 @@
             <div class="fieldwork-col">
                 <figure class="fieldwork-figure">
                     <img src="fieldimg.webp" alt="Understanding the process of khadi weaving"
-                        class="img-reveal fieldwork-img" />
+                        class="img-reveal fieldwork-img" loading="lazy" decoding="async" />
                     <figcaption>understanding the process of khadi weaving</figcaption>
                 </figure>
                 <figure class="fieldwork-figure">
                     <img src="fieldimg4.webp" alt="Khadi bobbin stacked at Jetharam ji's home"
-                        class="img-reveal fieldwork-img fieldwork-img--tall" />
+                        class="img-reveal fieldwork-img fieldwork-img--tall" loading="lazy" decoding="async" />
                     <figcaption>kahadi bobbin stacked at jetharam ji homes</figcaption>
                 </figure>
                 <figure class="fieldwork-figure">
                     <img src="fieldimg7.webp" alt="Understanding raw wool cleaning and scouring"
-                        class="img-reveal fieldwork-img" />
+                        class="img-reveal fieldwork-img" loading="lazy" decoding="async" />
                     <figcaption>understanding raw wool cleaning and scouring</figcaption>
                 </figure>
             </div>
@@ -244,16 +258,17 @@
             <div class="fieldwork-col">
                 <figure class="fieldwork-figure">
                     <img src="fieldimg2.webp" alt="Field analysis and team"
-                        class="img-reveal fieldwork-img fieldwork-img--wide" />
+                        class="img-reveal fieldwork-img fieldwork-img--wide" loading="lazy" decoding="async" />
                     <figcaption>Field analysis and team</figcaption>
                 </figure>
                 <figure class="fieldwork-figure">
                     <img src="fieldimg5.webp" alt="Open ended interviews with Jetharam ji"
-                        class="img-reveal fieldwork-img" />
+                        class="img-reveal fieldwork-img" loading="lazy" decoding="async" />
                     <figcaption>Open ended interviews with Jetharam ji</figcaption>
                 </figure>
                 <figure class="fieldwork-figure fieldwork-figure--no-caption">
-                    <img src="fieldimg8.webp" alt="Field documentation" class="img-reveal fieldwork-img" />
+                    <img src="fieldimg8.webp" alt="Field documentation" class="img-reveal fieldwork-img" loading="lazy"
+                        decoding="async" />
                 </figure>
             </div>
 
@@ -261,17 +276,17 @@
             <div class="fieldwork-col">
                 <figure class="fieldwork-figure">
                     <img src="fieldimg3.webp" alt="Understanding the process of charkha and thread making"
-                        class="img-reveal fieldwork-img" />
+                        class="img-reveal fieldwork-img" loading="lazy" decoding="async" width="463" height="260" />
                     <figcaption>understaind the process of charkha and thread making</figcaption>
                 </figure>
                 <figure class="fieldwork-figure">
                     <img src="fieldimg6.webp" alt="Checking payment records of artisans at Khadi Mandir"
-                        class="img-reveal fieldwork-img" />
+                        class="img-reveal fieldwork-img" loading="lazy" decoding="async" width="432" height="314" />
                     <figcaption>checking payment records of artisans at khadi mandir</figcaption>
                 </figure>
                 <figure class="fieldwork-figure">
-                    <img src="fieldimg9.webp" alt="Interview with shepherds in desert"
-                        class="img-reveal fieldwork-img" />
+                    <img src="fieldimg9.webp" alt="Interview with shepherds in desert" class="img-reveal fieldwork-img"
+                        loading="lazy" decoding="async" width="440" height="247" />
                     <figcaption>interview with shepards in desert</figcaption>
                 </figure>
             </div>
@@ -367,7 +382,8 @@
             <!-- Artisan 1 -->
             <div class="artisan-card">
                 <div class="artisan-card__img-wrap">
-                    <img src="artisan1.webp" alt="Jetharam Meghwal" class="artisan-card__img img-reveal" />
+                    <img src="artisan1.webp" alt="Jetharam Meghwal" class="artisan-card__img img-reveal" loading="lazy"
+                        decoding="async" width="232" height="232" />
                 </div>
                 <div class="artisan-card__info">
                     <div class="artisan-card__name-block">
@@ -390,7 +406,8 @@
             <!-- Artisan 2 -->
             <div class="artisan-card">
                 <div class="artisan-card__img-wrap">
-                    <img src="artisan2.webp" alt="Artisan portrait 2" class="artisan-card__img img-reveal" />
+                    <img src="artisan2.webp" alt="Artisan portrait 2" class="artisan-card__img img-reveal"
+                        loading="lazy" decoding="async" width="119" height="215" />
                 </div>
                 <div class="artisan-card__info">
                     <div class="artisan-card__name-block">
@@ -413,7 +430,8 @@
             <!-- Artisan 3 -->
             <div class="artisan-card">
                 <div class="artisan-card__img-wrap">
-                    <img src="artisan3.webp" alt="Artisan portrait 3" class="artisan-card__img img-reveal" />
+                    <img src="artisan3.webp" alt="Artisan portrait 3" class="artisan-card__img img-reveal"
+                        loading="lazy" decoding="async" width="200" height="206" />
                 </div>
                 <div class="artisan-card__info">
                     <div class="artisan-card__name-block">
@@ -436,7 +454,8 @@
             <!-- Artisan 4 -->
             <div class="artisan-card">
                 <div class="artisan-card__img-wrap">
-                    <img src="artisan4.webp" alt="Artisan portrait 4" class="artisan-card__img img-reveal" />
+                    <img src="artisan4.webp" alt="Artisan portrait 4" class="artisan-card__img img-reveal"
+                        loading="lazy" decoding="async" width="232" height="232" />
                 </div>
                 <div class="artisan-card__info">
                     <div class="artisan-card__name-block">
@@ -459,7 +478,8 @@
             <!-- Artisan 5 -->
             <div class="artisan-card">
                 <div class="artisan-card__img-wrap">
-                    <img src="artisan5.webp" alt="Artisan portrait 5" class="artisan-card__img img-reveal" />
+                    <img src="artisan5.webp" alt="Artisan portrait 5" class="artisan-card__img img-reveal"
+                        loading="lazy" decoding="async" width="232" height="232" />
                 </div>
                 <div class="artisan-card__info">
                     <div class="artisan-card__name-block">
@@ -482,7 +502,8 @@
             <!-- Artisan 6 -->
             <div class="artisan-card">
                 <div class="artisan-card__img-wrap">
-                    <img src="artisan6.webp" alt="Artisan portrait 6" class="artisan-card__img img-reveal" />
+                    <img src="artisan6.webp" alt="Artisan portrait 6" class="artisan-card__img img-reveal"
+                        loading="lazy" decoding="async" width="232" height="232" />
                 </div>
                 <div class="artisan-card__info">
                     <div class="artisan-card__name-block">
@@ -520,7 +541,8 @@
        FOOTER IMAGE
   ────────────────────────────────────────────────────────────────── -->
     <div class="footer-image" id="footer-image">
-        <img src="imgcrdlast.webp" alt="Khadi craft documentation — closing visual" class="footer-image__img" />
+        <img src="imgcrdlast.webp" alt="Khadi craft documentation — closing visual" class="footer-image__img"
+            loading="lazy" decoding="async" width="1892" height="1738" />
     </div>
 
     <!-- ──────────────────────────────────────────────────────────────
@@ -570,9 +592,10 @@
                     </div>
                     <a href="mailto:shiyansagar@gmail.com" class="footer-new-link">shiyansagar@gmail.com</a>
                     <a href="../../index.html" class="footer-new-link">Home</a>
-                    <a href="https://drive.google.com/drive/folders/15f_C51tl_OvEgSRvTeEGdLZC9Kuj1lyG?usp=drive_link" class="footer-new-link">CV</a>
+                    <a href="https://drive.google.com/drive/folders/15f_C51tl_OvEgSRvTeEGdLZC9Kuj1lyG?usp=drive_link"
+                        class="footer-new-link">CV</a>
                 </div>
-                <div class="footer-new-right">  
+                <div class="footer-new-right">
                     <div class="footer-new-col">
                         <a href="#" class="footer-new-title">Go Back</a>
                         <div class="footer-new-list">
@@ -592,44 +615,17 @@
                     </div>
                 </div>
             </div>
-            <div id="footer-shader-container"></div>
+        </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <!-- Lenis smooth scroll -->
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
     <!-- GSAP + ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
     <script src="crd.js" defer></script>
-    <script type="module" defer>
-        import React from 'https://esm.sh/react@18.2.0';
-        import { createRoot } from 'https://esm.sh/react-dom@18.2.0/client';
-        import { GrainGradient } from 'https://esm.sh/@paper-design/shaders-react@0.0.74?deps=react@18.2.0,react-dom@18.2.0';
-
-        const container = document.getElementById('footer-shader-container');
-        if (container) {
-            const root = createRoot(container);
-            root.render(
-                React.createElement(GrainGradient, {
-                    speed: 1,
-                    scale: 0.61,
-                    rotation: 0,
-                    offsetX: -0.35,
-                    offsetY: 0.2,
-                    softness: 1,
-                    intensity: 0,
-                    noise: 0.42,
-                    shape: "wave",
-                    frame: 22000.899999994042,
-                    colors: ['#3E2C54', '#000000', '#5E4623'],
-                    colorBack: "#00000000",
-                    style: { width: '100%', height: '100%', backgroundColor: 'transparent' }
-                })
-            );
-        }
-    </script>
 </body>
 
 </html>

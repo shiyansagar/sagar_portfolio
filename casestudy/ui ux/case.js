@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (marqueeInner) {
         gsap.to(marqueeInner, {
-            x: "-4%",
+            x: "-10%",
             ease: "none",
             scrollTrigger: {
                 trigger: ".marquee-strip",

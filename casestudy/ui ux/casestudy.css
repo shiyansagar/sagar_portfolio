@@ -4,10 +4,6 @@
    All sizes are exact pixel values from the Paper design.
    ============================================================ */
 
-@font-face {
-  font-family: 'Satoshi';
-  font-display: swap;
-}
 
 /* ==================== GLOBAL NAV ==================== */
 .global-nav {

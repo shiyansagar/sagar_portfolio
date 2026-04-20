@@ -9,15 +9,18 @@
         content="TX-6 ultra-portable pro-mixer and audio interface by teenage engineering. 6 channel stereo mixer with a configurable knob layout." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet" />
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" />
+    </noscript>
+    <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap">
+    </noscript>
     <link rel="icon" type="image/svg+xml" href="../fevicon.svg?v=2">
     <link rel="stylesheet" href="tx6.css" />
-    <!-- Lenis smooth scroll -->
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-    <!-- GSAP + ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -53,113 +56,133 @@
 
     </nav>
 
-    <!-- ═══════════════════════════════════════════
+    <main role="main">
+        <!-- ═══════════════════════════════════════════
        HERO  — 100vh, overflow visible, image absolute
   ═══════════════════════════════════════════ -->
-    <section class="hero">
+        <section class="hero">
 
-        <!-- H1 behind the hero image, 50px from top -->
-        <h1 class="hero-title"><span class="title-tx" id="title-tx">Tx</span><span class="title-dash6"
-                id="title-dash6">-6</span></h1>
+            <!-- H1 behind the hero image, 50px from top -->
+            <h1 class="hero-title"><span class="title-tx" id="title-tx">Tx</span><span class="title-dash6"
+                    id="title-dash6">-6</span></h1>
 
-        <!-- Hero background image — absolute, 100% width, covers full -->
-        <img src="hero-image.webp" alt="TX-6 hero" class="hero-image" fetchpriority="high" />
+            <!-- Hero background image — absolute, 100% width, covers full -->
+            <img src="hero-image.webp" alt="TX-6 hero" class="hero-image" fetchpriority="high" width="2997"
+                height="2399" />
 
-        <!-- Content row — 700px / 70vh height, baseline items, two text blocks -->
-        <div class="hero-content" id="hero-content">
-            <div class="hero-text-left" id="hero-text-left">
-                <div class="wrapall">
-                    <div class="rectangle"></div>
-                    ultra-portable pro-mixer<br />and audio interface
+            <!-- Content row — 700px / 70vh height, baseline items, two text blocks -->
+            <div class="hero-content" id="hero-content">
+                <div class="hero-text-left" id="hero-text-left">
+                    <div class="wrapall">
+                        <div class="rectangle"></div>
+                        ultra-portable pro-mixer<br />and audio interface
+                    </div>
+                </div>
+                <div class="hero-text-right" id="hero-text-right">
+                    <div class="wrapall">
+                        <div class="rectangle"></div>
+                        6 channel stereo mixer with a<br />configurable knob layout.
+                    </div>
                 </div>
             </div>
-            <div class="hero-text-right" id="hero-text-right">
-                <div class="wrapall">
-                    <div class="rectangle"></div>
-                    6 channel stereo mixer with a<br />configurable knob layout.
-                </div>
-            </div>
-        </div>
 
-    </section>
+        </section>
 
-    <!-- ═══════════════════════════════════════════
+        <!-- ═══════════════════════════════════════════
        INFO SECTION — TX-6 label + description
   ═══════════════════════════════════════════ -->
-    <section class="info-section">
+        <section class="info-section">
 
-        <div class="info-text-block">
-            <h2 class="info-label">TX-6</h2>
-            <p class="info-desc">
-                Modeled the TX-6 in Rhino with precise surface detailing and geometry control,
-                and developed animations in Blender, to get the teenage engineering design aesthetics
-            </p>
-            <div class="boxbtn">
-                <img src="logo.png" alt="">
-            </div>
-
-        </div>
-
-        <!-- TX6-FRONT big row: image left + text right -->
-        <div class="front-row">
-
-            <!-- Left: tx6-front.webp at 701×1249 -->
-            <div class="front-image-wrap">
-                <img src="front1.webp" alt="TX-6 front view" class="front-image" loading="lazy" width="701" height="1249" />
-            </div>
-
-            <!-- Right: description text, centered, padding-bottom 180px -->
-            <div class="front-text-wrap">
-                <p class="front-text">
-                    TX–6 is our ultra-portable, battery-powered mixer and multi-channel audio interface.
-                    comparable to larger units, but with even more tech packed into one sturdy little machine.
-                    mix 6 stereo input channels, use tempo sync, discover the internal synthesizer and sequencer
-                    or use the built-in tuner. MFi compatibility even lets you connect to your iOS devices.
+            <div class="info-text-block">
+                <h2 class="info-label">TX-6</h2>
+                <p class="info-desc">
+                    Modeled the TX-6 in Rhino with precise surface detailing and geometry control,
+                    and developed animations in Blender, to get the teenage engineering design aesthetics
                 </p>
+                <div class="boxbtn">
+                    <img src="logo.png" alt="">
+                </div>
+
             </div>
 
-        </div>
+            <!-- TX6-FRONT big row: image left + text right -->
+            <div class="front-row">
 
-    </section>
+                <!-- Left: tx6-front.webp at 701×1249 -->
+                <div class="front-image-wrap">
+                    <img src="front1.webp" alt="TX-6 front view" class="front-image" loading="lazy" decoding="async"
+                        width="2006" height="2880" />
+                </div>
 
-    <section class="video-section">
-        <h2 class="video-title">Motion</h2>
-        <video data-src="Sequence-01.mp4" loop muted playsinline preload="none" class="main-video"></video>
-    </section>
+                <!-- Right: description text, centered, padding-bottom 180px -->
+                <div class="front-text-wrap">
+                    <p class="front-text">
+                        TX–6 is our ultra-portable, battery-powered mixer and multi-channel audio interface.
+                        comparable to larger units, but with even more tech packed into one sturdy little machine.
+                        mix 6 stereo input channels, use tempo sync, discover the internal synthesizer and sequencer
+                        or use the built-in tuner. MFi compatibility even lets you connect to your iOS devices.
+                    </p>
+                </div>
 
-    <script>
-    (function() {
-      const vid = document.querySelector('.main-video');
-      if (!vid) return;
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            if (vid.dataset.src) {
-              vid.src = vid.dataset.src;
-              vid.load();
-              vid.play();
-            }
-            obs.unobserve(vid);
-          }
-        });
-      }, { threshold: 0.2 });
-      obs.observe(vid);
-    })();
-    </script>
+            </div>
 
-    <!-- ═══════════════════════════════════════════
+        </section>
+
+        <section class="video-section">
+            <h2 class="video-title">Animation</h2>
+            <video data-src="Sequence-01.webm" loop playsinline preload="none" class="main-video"></video>
+        </section>
+
+        <script>
+            (function () {
+                const vid = document.querySelector('.main-video');
+                if (!vid) return;
+
+                // Allow user to click the video to toggle sound on/off without changing layout
+                vid.style.cursor = 'pointer';
+                vid.addEventListener('click', () => {
+                    vid.muted = !vid.muted;
+                });
+
+                const obs = new IntersectionObserver((entries) => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) {
+                            if (vid.dataset.src) {
+                                vid.src = vid.dataset.src;
+                                vid.load();
+
+                                // Attempt to play with sound first
+                                let playPromise = vid.play();
+                                if (playPromise !== undefined) {
+                                    playPromise.catch(error => {
+                                        // If browser blocks unmuted autoplay, fallback to muted so animation still plays
+                                        vid.muted = true;
+                                        vid.play();
+                                    });
+                                }
+                            }
+                            obs.unobserve(vid);
+                        }
+                    });
+                }, { threshold: 0.2 });
+                obs.observe(vid);
+            })();
+        </script>
+
+        <!-- ═══════════════════════════════════════════
        IMAGE SEQUENCE — scroll-driven canvas animation
   ═══════════════════════════════════════════ -->
-    <section id="seq-section" class="seq-section">
-        <canvas id="seq-canvas" class="seq-canvas"></canvas>
-    </section>
-    <section class="render-section">
-        <h2 class="render-title">Render</h2>
-        <div class="renderwrapper">
-            <img src="render2.webp" alt="TX-6 Render 1" loading="lazy" width="800" height="600">
-            <img src="render3.webp" alt="TX-6 Render 2" loading="lazy" width="800" height="600">
-        </div>
-    </section>
+        <section id="seq-section" class="seq-section">
+            <canvas id="seq-canvas" class="seq-canvas"></canvas>
+        </section>
+        <section class="render-section">
+            <h2 class="render-title">Render</h2>
+            <div class="renderwrapper">
+                <img src="render2.webp" alt="TX-6 Render 1" loading="lazy" decoding="async" width="800" height="600">
+                <img src="render3.webp" alt="TX-6 Render 2" loading="lazy" decoding="async" width="800" height="600">
+            </div>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <h2>projects</h2>
@@ -200,7 +223,8 @@
                     </div>
                     <a href="mailto:shiyansagar@gmail.com" class="footer-new-link">shiyansagar@gmail.com</a>
                     <a href="../../index.html" class="footer-new-link">Home</a>
-                    <a href="https://drive.google.com/drive/folders/15f_C51tl_OvEgSRvTeEGdLZC9Kuj1lyG?usp=drive_link" class="footer-new-link">CV</a>
+                    <a href="https://drive.google.com/drive/folders/15f_C51tl_OvEgSRvTeEGdLZC9Kuj1lyG?usp=drive_link"
+                        class="footer-new-link">CV</a>
                 </div>
                 <div class="footer-new-right">
                     <div class="footer-new-col">
@@ -222,41 +246,13 @@
                     </div>
                 </div>
             </div>
-            <div id="footer-shader-container"></div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="tx6.js"></script>
-    <script type="module" defer>
-        import React from 'https://esm.sh/react@18.2.0';
-        import { createRoot } from 'https://esm.sh/react-dom@18.2.0/client';
-        import { GrainGradient } from 'https://esm.sh/@paper-design/shaders-react@0.0.74?deps=react@18.2.0,react-dom@18.2.0';
-
-        const container = document.getElementById('footer-shader-container');
-        if (container) {
-            const root = createRoot(container);
-            root.render(
-                React.createElement(GrainGradient, {
-                    speed: 1,
-                    scale: 0.61,
-                    rotation: 0,
-                    offsetX: -0.35,
-                    offsetY: 0.2,
-                    softness: 1,
-                    intensity: 0,
-                    noise: 0.42,
-                    shape: "wave",
-                    frame: 22000.899999994042,
-                    colors: ['#2E3F3E', '#3C435B', '#436D7B'],
-                    colorBack: "#00000000",
-                    style: { width: '100%', height: '100%', backgroundColor: 'transparent' }
-                })
-            );
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="tx6.js" defer></script>
 
 </body>
 

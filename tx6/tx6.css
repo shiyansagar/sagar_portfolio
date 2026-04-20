@@ -4,8 +4,8 @@
    ============================================================ */
 
 @font-face {
-  font-family: 'Satoshi';
-  font-display: swap;
+    font-family: 'Satoshi';
+    font-display: swap;
 }
 
 /* ─── Reset ─────────────────────────────────────────────── */
@@ -803,8 +803,13 @@ body {
         border-bottom: 1px solid #ffffff8d;
     }
 
+    .render-section {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
     .site-footer {
-        padding-top: 60px;
+        padding-top: 100px;
         gap: 60px;
     }
 }
