@@ -78,6 +78,22 @@
     </noscript>
     <link rel="icon" type="image/svg+xml" href="../fevicon.svg?v=2">
     <link rel="stylesheet" href="crd.css" />
+    <!-- Speculation Rules for Instant Page Loads -->
+    <script type="speculationrules">
+        {
+            "prefetch": [
+                {
+                    "source": "document",
+                    "where": {
+                        "and": [
+                            { "href_matches": "/*" }
+                        ]
+                    },
+                    "eagerness": "moderate"
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>

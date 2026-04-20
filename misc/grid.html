@@ -56,6 +56,22 @@
 
     <link rel="stylesheet" href="grid.css">
     <link rel="icon" type="image/svg+xml" href="../fevicon.svg?v=2">
+    <!-- Speculation Rules for Instant Page Loads -->
+    <script type="speculationrules">
+        {
+            "prefetch": [
+                {
+                    "source": "document",
+                    "where": {
+                        "and": [
+                            { "href_matches": "/*" }
+                        ]
+                    },
+                    "eagerness": "moderate"
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>
