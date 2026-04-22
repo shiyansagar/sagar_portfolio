@@ -465,7 +465,6 @@ body {
     width: 100%;
     max-width: 600px;
     height: 100px;
-    background-color: #1D1D1D;
     border-radius: 16px;
     padding: 8px;
     display: flex;
@@ -496,24 +495,44 @@ body {
     border-radius: 8px;
     transition: all 0.3s ease;
     padding: 8px;
+    position: relative;
 }
+
+.nav-inner img {
+    width: 24px;
+    height: 24px;
+    opacity: 70%;
+}
+
+.project-arrow {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+.project-box:hover .project-arrow {
+    transform: rotate(30deg);
+}
+
 
 .project-box span {
     font-family: "Satoshi", system-ui, sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 14px;
     line-height: 1.2;
-    color: #ffffff93;
+    color: #ffffffd2;
     pointer-events: none;
 }
 
 .project-box:hover span {
-    color: #ffffff;
+    color: #7d7d7d;
 }
 
 /* Hover state */
 .project-box:hover {
-    border-color: #ffffff;
+    border-color: #7d7d7d;
 }
 
 /* Active Project state */

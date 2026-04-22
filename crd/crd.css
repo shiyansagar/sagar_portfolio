@@ -1334,7 +1334,6 @@ section {
 
 .nav-inner {
     width: 100%;
-    background-color: #878787;
     border-radius: 12px;
     padding: 4px;
     display: flex;
@@ -1351,18 +1350,37 @@ section {
     text-align: center;
     text-decoration: none;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.916);
+    border: 1px solid rgba(0, 0, 0, 0.916);
     border-radius: 8px;
     transition: all 0.3s ease;
     padding: 8px;
+    position: relative;
+}
+
+.nav-inner img {
+    width: 24px;
+    height: 24px;
+    opacity: 70%;
+}
+
+.project-arrow {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+.project-box:hover .project-arrow {
+    transform: rotate(30deg);
 }
 
 .project-box span {
     font-family: "Satoshi-Variable", "Satoshi Variable", system-ui, sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 12px;
     line-height: 1.2;
-    color: #ffffffd2;
+    color: #000000d2;
     pointer-events: none;
 }
 
