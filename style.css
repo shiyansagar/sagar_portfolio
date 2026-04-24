@@ -455,6 +455,19 @@ a {
         gap: 0.5rem;
     }
 
+    .rightnav span {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .rightnav .aboutme {
+        font-weight: 500;
+    }
+
+    .rightnav .contactme {
+        font-weight: 500;
+    }
+
     .name-text h1 {
         font-size: clamp(0.8rem, 5vw, 1rem);
     }
@@ -463,15 +476,18 @@ a {
         font-size: clamp(0.8rem, 5vw, 1rem);
     }
 
+
     .imgher {
         width: 100%;
-        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 
     .imgher h4,
     .heremy h4 {
         font-size: clamp(0.8rem, 4vw, 1.2rem);
-        width: 90%;
+        width: 80%;
+        text-align: center;
     }
 
     .works {
