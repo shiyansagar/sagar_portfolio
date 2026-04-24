@@ -1,5 +1,5 @@
 {
-  "dependencies": {
-    "@paper-design/shaders-react": "^0.0.75"
-  }
+  "name": "portfolio",
+  "version": "1.0.0",
+  "dependencies": {}
 }
