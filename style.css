@@ -465,6 +465,7 @@ a {
 
     .imgher {
         width: 100%;
+        align-items: center;
     }
 
     .imgher h4,
