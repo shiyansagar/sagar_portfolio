@@ -470,6 +470,7 @@ a {
     .imgher h4,
     .heremy h4 {
         font-size: clamp(0.8rem, 4vw, 1.2rem);
+        width: 90%;
     }
 
     .works {
