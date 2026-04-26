@@ -441,9 +441,8 @@ body {
   /* -left-3.5 */
   top: -5px;
   /* -top-1.25 */
-  background-image: url('kttpm.gif');
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Extra section */
@@ -584,6 +583,10 @@ body {
 
   .about-label {
     display: none;
+  }
+
+  .about-row {
+    padding: 0 24px;
   }
 
   .bottom-section {

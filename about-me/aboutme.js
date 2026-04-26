@@ -5,7 +5,7 @@ import { prepareWithSegments, layoutWithLines } from './pretext.js';
 ───────────────────────────────────────────────────────────── */
 gsap.registerPlugin(ScrollTrigger);
 
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const duration = 0.8, stagger = 0.05;
 
     gsap.to(".hero-wrapper .reveal:not(#aboutStringContainer)", {
@@ -484,4 +484,4 @@ function buildStringEffect() {
     requestAnimationFrame(render);
 }
 
-window.addEventListener('load', buildStringEffect);
+document.addEventListener('DOMContentLoaded', buildStringEffect);

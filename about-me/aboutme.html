@@ -63,9 +63,10 @@
         }
     </style>
 
-    <!-- Fonts -->
+    <!-- Fonts & Images -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="portfolio-image.webp" as="image">
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap" />
     </noscript>
@@ -115,6 +116,7 @@
     <script>
         setTimeout(() => {
             document.documentElement.style.overflowY = 'auto';
+            document.body.style.animation = 'none';
             if (typeof ScrollTrigger !== 'undefined') {
                 ScrollTrigger.refresh();
             }
@@ -310,7 +312,7 @@
             <div class="where-row reveal">
                 <h2 class="where-label">Where am from…</h2>
                 <div class="gif-container">
-                    <div class="gif-inner"></div>
+                    <img src="kttpm.gif" class="gif-inner" loading="lazy" alt="Where I'm from map animation">
                 </div>
             </div>
 
