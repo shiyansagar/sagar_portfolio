@@ -4,9 +4,17 @@
   <!-- Homepage -->
   <url>
     <loc>https://sagarshiyan.vercel.app/</loc>
-    <lastmod>2026-04-23</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- About Me -->
+  <url>
+    <loc>https://sagarshiyan.vercel.app/about%20me/aboutme.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- UI/UX Case Study — OkCupid Trust Gap -->
