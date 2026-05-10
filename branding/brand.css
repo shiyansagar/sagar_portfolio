@@ -777,14 +777,14 @@ body {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
     justify-content: flex-end;
 }
 
 .footer-new-connect {
     align-items: flex-end;
     display: flex;
-    gap: 16px;
+    gap: 12px;
     justify-content: flex-end;
 }
 
@@ -842,7 +842,7 @@ body {
 .footer-new-list span,
 .footer-new-list a {
     color: #000000;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     text-decoration: none;
