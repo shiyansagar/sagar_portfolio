@@ -153,7 +153,7 @@ function initPillPhysics() {
    Based on https://github.com/pushmatrix/textstring
 ───────────────────────────────────────────────────────────── */
 const ABOUT_TEXT =
-    "I'm a designer from Kerala and a Fashion Communication student at NIFT, currently diving into the world of UI/UX design and UX research. I've always been drawn to creative storytelling, whether I'm working on graphic design, 3D projects, or video editing. For me, it's all about human-centric design—ensuring that whatever I build feels natural and grounded in how people actually live. " +
+    "I'm a designer from Kerala and a Fashion Communication student at NIFT, currently diving into the world of UI/UX design and UX research. I've always been drawn to creative storytelling, whether I'm working on graphic design, 3D projects, or video editing. For me, it's all about human-centric design ensuring that whatever I build feels natural and grounded in how people actually live. " +
     "Outside of work, I'm someone who just loves to be out there. I spend a lot of my time traveling and exploring new places, from the mountains to the coast. I've realized that while I love the process of building digital interfaces, I need that balance of seeing the world and living fully.";
 
 const FONT_SIZE = 16;
